@@ -1,0 +1,305 @@
+/* Color Variables */
+:root {
+  --primary-blue: hsl(223, 87%, 63%);
+  --secondary-pale-blue: hsl(223, 100%, 88%);
+  --secondary-light-red: hsl(354, 100%, 66%);
+  --neutral-gray: hsl(0, 0%, 59%);
+  --neutral-very-dark-blue: hsl(209, 33%, 12%);
+}
+
+/* CSS Reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  /* text-decoration-skip-ink: auto; */
+  text-decoration: none;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Mobile */
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: calc(20 / 16 * 1rem);
+  text-align: center;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  place-items: center;
+}
+
+.main {
+  max-width: calc(375 / 16 * 1rem);
+  padding: calc(81 / 16 * 1rem) calc(28 / 16 * 1rem) calc(37 / 16 * 1rem);
+}
+
+.main__logo {
+  width: 56px;
+  margin-inline: auto;
+}
+
+.launch-soon__title {
+  margin-top: 2rem;
+  font-weight: 300;
+  font-size: calc(22 / 16 * 1rem);
+  color: var(--neutral-gray);
+  line-height: calc(32 / 22);
+}
+
+em {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--neutral-very-dark-blue);
+}
+
+.launch-soon__subtitle {
+  margin-top: calc(15 / 16 * 1rem);
+  font-weight: 300;
+  font-size: calc(12 / 16 * 1rem);
+  color: var(--neutral-very-dark-blue);
+}
+
+.launch-soon__form {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.form__input-container {
+  display: inline-block;
+  margin-top: 2rem;
+  margin-bottom: 20px;
+  margin-inline: auto;
+}
+
+.form__input {
+  padding: calc(10 / 16 * 1rem) 2rem;
+  padding-right: calc(105 / 16 * 1rem);
+  border-radius: 28px;
+  border: 1px solid var(--secondary-pale-blue);
+  box-shadow: 0 0 7px 3px hsla(0, 0, 0, 0.01%);
+  font-size: calc(12 / 16 * 1rem);
+  color: var(--neutral-very-dark-blue);
+  line-height: calc(20 / 12);
+}
+
+.form__input::placeholder {
+  color: var(--secondary-pale-blue);
+}
+
+.form__error-message {
+  font-style: italic;
+  font-size: calc(10 / 16 * 1rem);
+  line-height: calc(20 / 10);
+  letter-spacing: 0.13px;
+  color: var(--secondary-light-red);
+  margin-top: 2px;
+  display: none;
+}
+
+.form__button {
+  background-color: var(--primary-blue);
+  border: none;
+  color: white;
+  padding: calc(12 / 16 * 1rem) calc(112.5 / 16 * 1rem);
+  font-size: calc(12 / 16 * 1rem);
+  font-weight: 600;
+  border-radius: 28px;
+  box-shadow: 0 5px 10px 2px hsla(223, 87%, 63%, 23.04%);
+  margin-inline: auto;
+}
+
+.main__preview {
+  margin-top: calc(72 / 16 * 1rem);
+}
+
+.main__social-media {
+  margin-top: calc(120 / 16 * 1rem);
+}
+
+.social-icons__icon {
+  margin-right: 11.71px;
+  font-size: 12px;
+  color: var(--primary-blue);
+}
+
+a i {
+  padding: 20px 14px;
+  border: 2px solid hsla(223, 87%, 63%, 14.65%);
+  border-radius: 50%;
+}
+
+a:nth-of-type(1) i {
+  padding: 20px 17px;
+}
+
+.social-media__copyright {
+  margin-top: calc(27 / 16 * 1rem);
+  font-weight: 300;
+  font-size: calc(10 / 16 * 1rem);
+  color: var(--neutral-gray);
+}
+
+/* Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: calc(750/16*1rem)) {
+  .main {
+    max-width: revert;
+  }
+
+  .main__logo {
+    width: 90px;
+  }
+
+  .launch-soon__title {
+    margin-top: calc(40 / 16 * 1rem);
+    font-size: calc(48 / 16 * 1rem);
+    line-height: calc(60 / 48);
+  }
+
+  .launch-soon__subtitle {
+    margin-top: calc(16 / 16 * 1rem);
+    font-size: calc(20 / 16 * 1rem);
+  }
+
+  .launch-soon__form {
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  .form__input-container {
+    margin-top: calc(40 / 16 * 1rem);
+    margin-right: 1rem;
+  }
+
+  .form__error-message {
+    font-size: calc(12 / 16 * 1rem);
+    line-height: calc(20 / 12);
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 6px;
+  }
+
+  .form__input {
+    padding: calc(18 / 16 * 1rem) calc(30 / 16 * 1rem);
+    padding-right: calc(200 / 16 * 1rem);
+    font-size: calc(16 / 16 * 1rem);
+    line-height: calc(20 / 16);
+  }
+
+  .form__button {
+    padding: calc(19 / 16 * 1rem) calc(62 / 16 * 1rem);
+    font-size: calc(16 / 16 * 1rem);
+    font-weight: 600;
+  }
+
+  .form__button:hover,
+  .form__button:focus {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+
+  .main__preview {
+    margin-top: calc(94 / 16 * 1rem);
+    width: 640px;
+    height: 383px;
+  }
+
+  .main__social-media {
+    margin-top: calc(72 / 16 * 1rem);
+    margin-bottom: 47px;
+  }
+
+  .social-media__copyright {
+    margin-top: calc(25 / 16 * 1rem);
+    font-size: calc(12 / 16 * 1rem);
+  }
+
+  a i:hover,
+  a i:focus {
+    color: white;
+    background-color: var(--primary-blue);
+  }
+}

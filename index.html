@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Ping coming soon page</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <main class="main">
+        <header class="main__header">
+          <img src="images/logo.svg" alt="PING. logo" class="main__logo" />
+        </header>
+        <section class="main__launch-soon">
+          <h2 class="launch-soon__title">We are launching <em>soon!</em></h2>
+          <p class="launch-soon__subtitle">Subscribe and get notified</p>
+          <form action="#" method="post" class="launch-soon__form" novalidate>
+            <span class="form__input-container">
+              <input
+              type="email"
+              placeholder="Your email address..."
+              required
+              class="form__input"
+              />
+              <p class="form__error-message">Please provide a valid email address</p>
+            </span>
+            <button type="submit" class="form__button">Notify Me</button>
+          </form>
+        </section>
+        <section class="main__preview">
+          <img
+            src="images/illustration-dashboard.png"
+            alt="A screenshot of a Slack interface showing a list of channels on the left and four message snippets with line graphs on the right."
+          />
+        </section>
+        <div class="main__social-media">
+          <div class="social-media__icons">
+            <a
+              href="https://www.facebook.com"
+              class="social-icons__icon social-icons__icon--facebook"
+              aria-label="facebook"
+            >
+            <i class="fa-brands fa-facebook-f fa-lg"></i></i></i>
+            </a>
+            <a
+              href="https://www.twitter.com"
+              class="social-icons__icon social-icons__icon--twitter"
+              aria-label="twitter"
+            >
+              <i class="fa-brands fa-x-twitter fa-lg"></i>
+            </a>
+            <a
+              href="https://www.instagram.com"
+              class="social-icons__icon social-icons__icon--instagram"
+              aria-label="instagram"
+            >
+              <i class="fa-brands fa-instagram fa-lg"></i>
+            </a>
+          </div>
+          <div class="social-media__copyright">
+            &copy; Copyright Ping. All rights reserved.
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Kamran Kiani</a>.
+        </p>
+      </footer>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/d2aeed5755.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js  "></script>
+  </body>
+</html>
