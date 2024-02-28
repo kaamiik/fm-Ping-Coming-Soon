@@ -13,8 +13,7 @@ function validateEmail(email) {
 }
 
 function changeStyle() {
-  errorEl.style.display = "block";
-  mainEL.style.marginTop = "40px";
+  errorEl.classList.remove("error-mesagge-hidden");
   emailEl.style.borderColor = "var(--secondary-light-red)";
 }
 
@@ -28,11 +27,10 @@ formEl.addEventListener("submit", function (e) {
   } else if (!validateEmail(emailEl.value)) {
     errorEl.textContent = "Please provide a valid email address";
     changeStyle();
-    emailEl.value = "";
 
     // ------------------------------
   } else {
     e.target.submit();
-    errorEl.style.display = "none";
+    errorEl.classList.add("error-mesagge-hidden");
   }
 });
